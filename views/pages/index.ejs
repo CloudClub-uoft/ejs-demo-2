@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('../partials/head'); %>
+    <%- include('../partials/head') -%>
 </head>
+
 <body class="container">
 
     <header>
-        <%- include('../partials/header'); %>
+        <%- include('../partials/header') -%>
     </header>
 
     <main>
         <div class="jumbotron">
             <h1>Top Mascots</h1>
-            <p><%= tagline %></p>
+            <p>An example.</p>
             <ul>
-                <% mascots.forEach(function(mascot) { %>
-                    <li>
-                        <strong><%= mascot.name %></strong>
-                        representing <%= mascot.organization %>, born <%= mascot.birth_year %>
-                    </li>
-                <% }); %>
+               <% mascots.forEach( function(mascot) { %> 
+                    <li><%- mascot.name -%> represents the company <%- mascot.organization -%></li>                   
+                    <% if (mascot.birth_year < 2000) { %>
+                        <ul>
+                            <li>Born in <%- mascot.birth_year -%> </li>
+                        </ul>
+                    <% } %>
+               <% } ) %>
             </ul>
         </div>
     </main>
 
     <footer>
-        <%- include('../partials/footer'); %>
+        <%- include('../partials/footer') -%>
     </footer>
 
 </body>
+
 </html>

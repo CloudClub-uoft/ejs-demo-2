@@ -1,8 +1,23 @@
 {
-  "name": "node-ejs",
+  "name": "ejs",
   "main": "server.js",
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "This is demo code for a DigitalOcean tutorial here: https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/do-community/ejs-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/do-community/ejs-demo/issues"
+  },
+  "homepage": "https://github.com/do-community/ejs-demo#readme"
 }
