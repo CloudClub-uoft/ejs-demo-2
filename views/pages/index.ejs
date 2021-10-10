@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="shortcut icon" type="image/jpg" href="public/favicon.png" />
 
 <head>
     <%- include('../partials/head') -%>
@@ -16,14 +17,17 @@
             <h1>Top Mascots</h1>
             <p>An example.</p>
             <ul>
-               <% mascots.forEach( function(mascot) { %> 
-                    <li><%- mascot.name -%> represents the company <%- mascot.organization -%></li>                   
+                <% mascots.forEach( function(mascot) { %>
+                    <li>
+                        <%- mascot.name -%> represents the company <%- mascot.organization -%>
+                    </li>
                     <% if (mascot.birth_year < 2000) { %>
                         <ul>
-                            <li>Born in <%- mascot.birth_year -%> </li>
+                            <li>Born in <%- mascot.birth_year -%>
+                            </li>
                         </ul>
-                    <% } %>
-               <% } ) %>
+                        <% } %>
+                            <% } ) %>
             </ul>
         </div>
     </main>
